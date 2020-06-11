@@ -5,48 +5,38 @@ import Title from "./components/Title";
 import EmployeesCard from "./components/EmployeesCard";
 import employee from "./employee.json";
 
-function App() {
-  return (
-    <Wrapper>
-      <Navbar />
-      <Title>Employees</Title>
-      <EmployeesCard
-        firstName={employee[0].firstName}
-        lastName={employee[0].lastName}
-        image={employee[0].image}
-        occupation={employee[0].occupation}
-        location={employee[0].location}
-      />
-      <EmployeesCard
-        firstName={employee[1].firstName}
-        lastName={employee[1].lastName}
-        image={employee[1].image}
-        occupation={employee[1].occupation}
-        location={employee[1].location}
-      />
-      <EmployeesCard
-        firstName={employee[7].firstName}
-        lastName={employee[7].lastName}
-        image={employee[7].image}
-        occupation={employee[7].occupation}
-        location={employee[7].location}
-      />
-      <EmployeesCard
-        firstName={employee[3].firstName}
-        lastName={employee[3].lastName}
-        image={employee[3].image}
-        occupation={employee[3].occupation}
-        location={employee[3].location}
-      />
-      <EmployeesCard
-        firstName={employee[4].firstName}
-        lastName={employee[4].lastName}
-        image={employee[4].image}
-        occupation={employee[4].occupation}
-        location={employee[4].location}
-      />
-    </Wrapper>
-  );
-}
+class App extends Component{
+
+  state = {
+    employee
+  };
+  //function filters employee by the name
+  filterEmployee = firstName => {
+    console.log(firstName);
+    const employee = this.state.employee.filter(employee => employee.firstName != firstName);
+    this.setState({ employee });
+  }
+  render() {
+    return (
+      <Wrapper>
+        <Navbar />
+        <Title>Employees</Title>
+        {this.Component}
+        {this.state.employee.map(employee => (
+          <EmployeesCard
+          id={employee.id}
+          key={employee.key}
+          firstName={employee.firstName}
+          lastName={employee.lastName}
+          image={employee.image}
+          occupation={employee.occupation}
+          location={employee.location}
+          />
+        ))};
+      </Wrapper>
+    )
+  }
+
+};
 
 export default App;

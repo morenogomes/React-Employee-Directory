@@ -1,11 +1,11 @@
 .wrapper {
-  padding-top: 50px;
+  /* padding-top: 50px; */
   background: #ECEFF1;
   background-image:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRsmoePJyDUpTotv709JBEZElS93l-QmAjhQzNhBmbHUanEtbDk&usqp=CAU";
   height: 100%;
   display: flex;
   flex-flow: row wrap;
-  padding: 20px;
+  /* padding: 20px; */
   justify-content: space-around;
   align-content: flex-start;
   overflow: auto;
