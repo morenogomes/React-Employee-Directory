@@ -2,29 +2,27 @@ import React from "react";
 import "./style.css";
 
 function EmployeesCard(props) {
-  console.log(props);
   return (
-    <div className="card">{props.friends.map(item => (
+    <div className="card">
       <div className="img-container">
         <img alt={props.name} src={props.image} />
       </div>
-      <div className="content" key={item.id}>
+      <div className="content">
         <ul>
           <li>
-            <strong>First Name:</strong> {item.firstName}
+            <strong>First Name:</strong> {props.firstName}
           </li>
           <li>
-            <strong>Last Name:</strong> {item.lastName}
+            <strong>Last Name:</strong> {props.lastName}
           </li>
           <li>
-            <strong>Occupation:</strong> {item.occupation}
+            <strong>Occupation:</strong> {props.occupation}
           </li>
           <li>
-            <strong>Location:</strong> {item.location}
+            <strong>Location:</strong> {props.location}
           </li>
         </ul>
       </div>
-    ))}
     </div>
   );
 }
