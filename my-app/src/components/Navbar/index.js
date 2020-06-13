@@ -1,9 +1,10 @@
 import React from "react";
+import Search from "../Search";
 
 
 function Navbar(props) {
   return (
-    <nav class="navbar navbar-light bg-light justify-content-between">{props.children}
+    <nav class="navbar navbar-light bg-light justify-content-between">
         <a class="navbar-brand"></a>
              <form class="form-inline">
                 <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"></input>

@@ -8,7 +8,8 @@ import employee from "./employee.json";
 class App extends Component{
 
   state = {
-    employee
+    employee,
+    seach
   };
   //function filters employee by the name
   filterEmployee = firstName => {
