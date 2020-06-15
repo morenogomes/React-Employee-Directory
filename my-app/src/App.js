@@ -9,7 +9,6 @@ class App extends Component{
 
   state = {
     employee,
-    seach
   };
   //function filters employee by the name
   filterEmployee = firstName => {
@@ -30,7 +29,7 @@ class App extends Component{
           firstName={employee.firstName}
           lastName={employee.lastName}
           image={employee.image}
-          occupation={employee.occupation}
+          occupation={employee.role}
           location={employee.location}
           />
         ))};
