@@ -31,7 +31,7 @@ class Search extends Component {
       <form class="form-inline">
         <input
           name="search"
-          value={this.state.search}
+          value={this.props.search}
           onChange={this.handleInputChxange}
           class="form-control mr-sm-2"
           type="search"
