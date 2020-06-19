@@ -7,7 +7,7 @@ class Search extends Component {
   };
 
   handleInputChange = (event) => {
-    //Getting the value an d name of the input wich triggered the change
+    //Getting the value and name of the input wich triggered the change
     const { name, value } = event.target;
 
     // Updating the input's state
@@ -18,14 +18,8 @@ class Search extends Component {
   handleFormSubmit = (event) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
-
-    // Alert the user their first and last name, clear `this.state.firstName` and `this.state.lastName`, clearing the inputs
-    alert(`Hello ${this.state.firstName} ${this.state.lastName}`);
-    this.setState({
-      firstName: "",
-      lastName: "",
-    });
   };
+
   render() {
     return (
       <form class="form-inline">
@@ -47,3 +41,35 @@ class Search extends Component {
 }
 
 export default Search;
+
+// import React from "react";
+
+// function Search(props) {
+//   return (
+//     <form className="search">
+//       <div className="form-group">
+//         <label htmlFor="breed">Breed Name:</label>
+//         <input
+//           value={props.search}
+//           onChange={props.handleInputChange}
+//           name="breed"
+//           list="breeds"
+//           type="text"
+//           className="form-control"
+//           placeholder="Type in a dog breed to begin"
+//           id="breed"
+//         />
+//         <datalist id="employee">
+//           {props.employee.map(employee => (
+//             <option value={employee} key={employee} />
+//           ))}
+//         </datalist>
+//         <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
+//           Search
+//         </button>
+//       </div>
+//     </form>
+//   );
+// };
+
+// export default Search;

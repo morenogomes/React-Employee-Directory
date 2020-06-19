@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import Search from "../Search";
+// import Search from "../Search";
 
 function EmployeesCard(props) {
   return (
@@ -11,10 +11,7 @@ function EmployeesCard(props) {
       <div className="content">
         <ul>
           <li>
-            <strong>First Name:</strong> {props.firstName}
-          </li>
-          <li>
-            <strong>Last Name:</strong> {props.lastName}
+            <strong>Name:</strong> {props.nameComplete}
           </li>
           <li>
             <strong>Occupation:</strong> {props.occupation}
