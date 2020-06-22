@@ -1,32 +1,27 @@
-import React, { Component } from "react";
+import React from "react";
 
-class Search extends Component {
+function Search() {
   //Setting the component' initial state
-  state = {
-    search: "",
-  };
+  const [search, useStateSearch] = useState();
 
-  handleInputChange = (event) => {
+  handleInputChange = event => {
     //Getting the value and name of the input wich triggered the change
-    const { name, value } = event.target;
+    event.preventDefault();
 
     // Updating the input's state
-    this.setState({
-      [name]: value,
-    });
+    console.log('search' + search );
   };
   handleFormSubmit = (event) => {
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
   };
 
-  render() {
     return (
       <form class="form-inline">
         <input
           name="search"
-          value={this.props.search}
-          onChange={this.handleInputChxange}
+          // value={''}
+          onChange={event => useState(event.target)}
           class="form-control mr-sm-2"
           type="search"
           placeholder="Search"
@@ -37,7 +32,7 @@ class Search extends Component {
         </button>
       </form>
     );
-  }
+  
 }
 
 export default Search;
