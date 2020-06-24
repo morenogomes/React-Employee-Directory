@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "./components/Navbar"
 // import Render from "./components/Render"
 import Wrapper from "./components/Wrapper";
@@ -33,26 +33,35 @@ import Search from "./components/Search";
 //   render() {
 
 function App() {
-  const [employee, setEmployee] = useState();
+  const [employees, setEmployees] = useState();
   
-    return (
-      <Wrapper>
-        <Navbar />
-        <Title>Employees</Title>
-        <Search/>
-        {this.Component}
-        {this.state.employee.map(employee => (
-          <EmployeesCard
-          id={employee.id}
-          key={employee.key}
-          nameComplete={employee.nameComplete}
-          image={employee.image}
-          occupation={employee.role}
-          location={employee.location}
-          />
-        ))};
-      </Wrapper>
-    )
+  return (
+    <Wrapper>
+      <Navbar />
+      <Title>Employees</Title>
+      <Search setEmployees={setEmployees}/>
+    </Wrapper>
+  )
+
+
+    // return (
+    //   <Wrapper>
+    //     <Navbar />
+    //     <Title>Employees</Title>
+    //     <Search/>
+    //     {this.Component}
+    //     {this.state.employee.map(employee => (
+    //       <EmployeesCard
+    //       id={employee.id}
+    //       key={employee.key}
+    //       nameComplete={employee.nameComplete}
+    //       image={employee.image}
+    //       occupation={employee.role}
+    //       location={employee.location}
+    //       />
+    //     ))};
+    //   </Wrapper>
+    // )
 };
 
 export default App;

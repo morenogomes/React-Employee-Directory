@@ -1,27 +1,39 @@
-import React from "react";
+import React,{ useState } from "react";
+import EmployeesCard from "../EmployeesCard";
 
-function Search() {
+//get all the employees from the json file.
+const employees = require('../../employee.json');
+
+function Search({setEmployees}) {
   //Setting the component' initial state
-  const [search, useStateSearch] = useState();
-
-  handleInputChange = event => {
+  const [search, setSearch] = useState('Search');
+  const handleInputChange = event => {
     //Getting the value and name of the input wich triggered the change
     event.preventDefault();
 
     // Updating the input's state
-    console.log('search' + search );
+    setSearch(event.target.value);
+
+ 
   };
-  handleFormSubmit = (event) => {
+  const handleFormSubmit = (event) => {
+
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
+    
+    //filter those employees based on the search value
+    const filtered_employees = employees.filter((employee) => employee.nameComplete.includes(search) );
+  
+    //call setEmployees with the filtered list of employees
+    setEmployees(filtered_employees)
   };
 
     return (
-      <form class="form-inline">
+      <form class="form-inline" onSubmit={handleFormSubmit}>
         <input
           name="search"
           // value={''}
-          onChange={event => useState(event.target)}
+          onChange={handleInputChange}
           class="form-control mr-sm-2"
           type="search"
           placeholder="Search"

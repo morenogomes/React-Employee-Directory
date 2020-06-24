@@ -6,7 +6,7 @@ function Navbar(props) {
   return (
     <nav class="navbar navbar-light bg-light justify-content-between">{props.children}
         <a className="navbar-brand"></a>
-             <Search/>
+   
     </nav>
     );
 }

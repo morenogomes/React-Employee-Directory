@@ -2,22 +2,22 @@ import React from "react";
 import "./style.css";
 // import Search from "../Search";
 
-function EmployeesCard(props) {
+function EmployeesCard({nameComplete, name, image, occupation, location}) {
   return (
     <div className="card">
       <div className="img-container">
-        <img alt={props.name} src={props.image} />
+        <img alt={name} src={image} />
       </div>
       <div className="content">
         <ul>
           <li>
-            <strong>Name:</strong> {props.nameComplete}
+            <strong>Name:</strong> {nameComplete}
           </li>
           <li>
-            <strong>Occupation:</strong> {props.occupation}
+            <strong>Occupation:</strong> {occupation}
           </li>
           <li>
-            <strong>Location:</strong> {props.location}
+            <strong>Location:</strong> {location}
           </li>
         </ul>
       </div>
