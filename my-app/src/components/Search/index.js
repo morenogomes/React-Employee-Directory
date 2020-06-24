@@ -17,12 +17,11 @@ function Search({setEmployees}) {
  
   };
   const handleFormSubmit = (event) => {
-
     // Preventing the default behavior of the form submit (which is to refresh the page)
     event.preventDefault();
     
     //filter those employees based on the search value
-    const filtered_employees = employees.filter((employee) => employee.nameComplete.includes(search) );
+    const filtered_employees = employees.filter((employee) => employee.nameComplete.includes(search));
   
     //call setEmployees with the filtered list of employees
     setEmployees(filtered_employees)
@@ -48,35 +47,3 @@ function Search({setEmployees}) {
 }
 
 export default Search;
-
-// import React from "react";
-
-// function Search(props) {
-//   return (
-//     <form className="search">
-//       <div className="form-group">
-//         <label htmlFor="breed">Breed Name:</label>
-//         <input
-//           value={props.search}
-//           onChange={props.handleInputChange}
-//           name="breed"
-//           list="breeds"
-//           type="text"
-//           className="form-control"
-//           placeholder="Type in a dog breed to begin"
-//           id="breed"
-//         />
-//         <datalist id="employee">
-//           {props.employee.map(employee => (
-//             <option value={employee} key={employee} />
-//           ))}
-//         </datalist>
-//         <button type="submit" onClick={props.handleFormSubmit} className="btn btn-success">
-//           Search
-//         </button>
-//       </div>
-//     </form>
-//   );
-// };
-
-// export default Search;
