@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Navbar from "./components/Navbar"
+// import Navbar from "./components/Navbar";
 // import Render from "./components/Render"
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";

@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.css";
-// import Search from "../Search";
 
 function EmployeesCard({nameComplete, name, image, occupation, location}) {
   return (
